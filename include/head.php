@@ -41,6 +41,12 @@
 						else {
 							echo '<li><a href="user.php">Личный кабинет</a></li>';
 						}
+						if (basename($_SERVER['SCRIPT_NAME']) == 'user.php') {
+							echo '<li class="active"><a href="instruction.php">Инструкции</a></li>';
+						}
+						else {
+							echo '<li><a href="instruction.php">Инструкции</a></li>';
+						}
 						if ($_COOKIE["user_is_admin"] == 1) {
 							if (basename($_SERVER['SCRIPT_NAME']) == 'admin.php' || basename($_SERVER['SCRIPT_NAME']) == 'admin_users.php' || basename($_SERVER['SCRIPT_NAME']) == 'admin_indications.php'  || basename($_SERVER['SCRIPT_NAME']) == 'admin_payments.php') {
 								echo '<li class="active"><a href="admin.php">Админ. панель</a></li>';
